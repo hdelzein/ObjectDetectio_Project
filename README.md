@@ -26,8 +26,8 @@ Explain the project
 
 ### Data Augmentation Analysis
 
-<img src="augImages/flipHorizantal.png" width="100" alt = "Test " title = "Horizantol Flip"> <img src="augImages/cropImage.png" width="100" title = "Crop Image">
-<img src="augImages/adjustBright.png" width="100" title = "Adjust Brightness"> <img src="augImages/adjustContrast.png" width="100" title = "Adjust Contrast">
+<img src="augImages/flipHorizantal.png" width="200" title = "Horizantol Flip"> <img src="augImages/cropImage.png" width="200" title = "Crop Image">
+<img src="augImages/adjustBright.png" width="200" title = "Adjust Brightness"> <img src="augImages/adjustContrast.png" width="200" title = "Adjust Contrast">
 
 ## Training
 
