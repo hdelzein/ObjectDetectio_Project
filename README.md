@@ -37,7 +37,12 @@ Explain the project
 <img src="TensorBoardFigures/totalLoss.jpg" width="250"/> <img src="TensorBoardFigures/learning rate.jpg" width="250"/>
 <img src="TensorBoardFigures/class_local_loss.jpg" width="500">
 <img src="TensorBoardFigures/norm_reg_loss.jpg" width="500">
-
+<img src="TensorBoardFigures/detectPrecisionOne.jpg" width="500">
+<img src="TensorBoardFigures/detectPrecisionTwo.jpg" width="500">
+<img src="TensorBoardFigures/detectPrecisionThree.jpg" width="500">
+<img src="TensorBoardFigures/RecallOne.jpg" width="500">
+<img src="TensorBoardFigures/RecallTwo.jpg" width="500">
+<img src="TensorBoardFigures/RecallThree.jpg" width="500">
 
 
 ### Improve the reference
