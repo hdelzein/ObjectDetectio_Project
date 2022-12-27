@@ -2,7 +2,14 @@
 
 ## Project Overview
 
-For this project, we will be using data from the [Waymo Open dataset](https://waymo.com/open/).
+This is SSD (Single Shot Detector) model training project. The goal is to classify cars, pedestrians and cyclists
+as a classfication problem and to determine the location of the objects or bounding boxs in the image of these class_local_loss
+as a regression problem. 
+
+For this project, we will be using data from the [Waymo Open dataset](https://waymo.com/open/) and a pretrained model which is the
+ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz.
+
+
 
 Explain the project
 
