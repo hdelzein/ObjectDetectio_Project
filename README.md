@@ -16,7 +16,7 @@ For this project I used the Udacity Desktop ennviroment fot training and evaluat
 the data is as follow:
 
 ### Data Structure 
-The data you will use for training, validation and testing is organized as follow:
+The structure of the data used for training, validation and testing is organized as follow:
 ```
 /home/workspace/data/waymo
     - training_and_validation - contains 97 files to train and validate your models
@@ -51,6 +51,14 @@ Final_Config_File/
 
 ### Data Exploratory Analysis 
 
+I used the Exploratory Data Analysis.ipynb to plot ten random figures with cars bounding boxes in blue and
+pedesrians bounding boxes in green and cyclists bounding boxes in yellow. The cars were the most extremly 
+frequent objects followed by pedestrians. Cyclists were very rare. As the images below shows that the data 
+included images with different brightness, and intensity levels. Also the plots included images of objects 
+at different, depth, scale, and with occulsions. More data analysis of the frequency of objects and there 
+distribution over the image dataset could have been very usefull and interesting if time on the GPU permitted.
+
+
 <img src="DataImages/one_one.png" width="1000">
 <img src="DataImages/two_one.png" width="1000">
 <img src="DataImages/three_one.png" width="1000">
@@ -63,6 +71,11 @@ Final_Config_File/
 <img src="DataImages/ten_one.png" width="1000">
 
 ### Data Augmentation Analysis
+
+The execution of the Explore augmentations.ipynb notebook showed two images inside of the notebook. I modified the noteboo 
+and the config file to plot four augmented images. These images from the left to the right is "Horizantol Flip", "Crop Image", 
+"Adjust Brightness", and "Adjust Contrast". Something that would have been very usefull is the ability to plot the original 
+image next to its augmented image to visualize the effect that is made on the images.
 
 <img src="augImages/flipHorizantal.png" width="150" title = "Horizantol Flip"> <img src="augImages/cropImage.png" width="150" title = "Crop Image">
 <img src="augImages/adjustBright.png" width="150" title = "Adjust Brightness"> <img src="augImages/adjustContrast.png" width="150" title = "Adjust Contrast">
