@@ -120,11 +120,8 @@ I would have liked to run this experiment with a higher number of batchs like 10
 and 4000 but the memory limitation and GPU time limitation did not allow for that. This experiment I believe could have generalized
 better on the evaluation step.
 
-As far for the recall and precision, the fact that it was only one dot did not allow for easy and good visualization of the performance
-but I believe the numbers in general were acceptable. 
-
-Access to inspect the images that were missclassified during training and evaluation would have been very usefull for evalauting precision
-and recall.  
+Access to inspect the images that were missclassified during training and evaluation would have been very usefull for better evalauting 
+precision and recall.  
 
 This test used two augmentation techniques which are horizantal flip and image crop. If time permitted I would have likded to add random
 brightness, random contrast, random hue and distort color.
