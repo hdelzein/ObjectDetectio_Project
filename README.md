@@ -126,6 +126,9 @@ but I believe the numbers in general were acceptable.
 Access to inspect the images that were missclassified during training and evaluation would have been very usefull for evalauting precision
 and recall.  
 
+This test used two augmentation techniques which are horizantal flip and image crop. If time permitted I would have likded to add random
+brightness, random contrast, random hue and distort color.
+
 <img src="TensorBoardFigures/totalLoss.jpg" width="250"/> <img src="TensorBoardFigures/learning rate.jpg" width="250"/>
 <img src="TensorBoardFigures/class_local_loss.jpg" width="500">
 <img src="TensorBoardFigures/norm_reg_loss.jpg" width="500">
