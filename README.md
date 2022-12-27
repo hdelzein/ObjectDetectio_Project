@@ -72,7 +72,7 @@ distribution over the image dataset could have been very usefull and interesting
 
 ### Data Augmentation Analysis
 
-The execution of the Explore augmentations.ipynb notebook showed two images inside of the notebook. I modified the noteboo 
+The execution of the Explore augmentations.ipynb notebook showed two images inside of the notebook. I modified the notebook 
 and the config file to plot four augmented images. These images from the left to the right is "Horizantol Flip", "Crop Image", 
 "Adjust Brightness", and "Adjust Contrast". Something that would have been very usefull is the ability to plot the original 
 image next to its augmented image to visualize the effect that is made on the images.
@@ -84,6 +84,34 @@ image next to its augmented image to visualize the effect that is made on the im
 
 ### Training Experiment
 
+The training was executed on a batch size of two for total number of steps of 2500. As a result we can see that the losses is 
+not varying smoothly from one period to the other because of the small batch size. That is because that one of the small batch 
+size might generates a low loss but suddenly the performance worsen on the next batch size. Hence at the end of the total steps,
+the total loss can be either high or low based on the randomness of which batch of images are tested toward the end. Hence it is 
+better to consider the smooth total loss versus the value of the loss at the last step. For the total loss below, the training 
+loss was equal to 0.6407 while the evaluation loss was equal to 0.877. I run this experiment multiple times and I realized that 
+even when the training can vary from one run to the next and it can overfit or not ovberfit, the evaluation loss value varied 
+between 0.8 to 0.9. Also since the visalization of the evaluation is a dot versus a curve it was hard to examine how evaluation
+loss is trending.
+
+As far as the as the classification loss, the training and evaluation losses were low and close to each other. On the other hand 
+localiztion training and evaluation losses were close to each others but they were very slightly higher than the classification 
+losses. That indicate that the algorithm did a better job classifying objecys versus localizing the objects. A good experiment 
+could have been the ability to determine which images was misclassified or misslocalized and to analyze the data and maybe
+feed more training examples into the system to train it better. 
+
+The regulariztion loss was decreasing through the run, but it flattened toward the end which could means that the system overfitted
+slightly in this particular execution of the experiment.
+
+I would have liked to run this experiment with a higher number of batchs like 10 and with around total number of steps between 2500 
+and 4000 but the memory limitation and GPU time limitation did not allow for that. This experiment I believe could have generalized
+better on the evaluation step.
+
+As far for the recall and precision, the fact that it was only one dot did not allow for easy and good visualization of the performance
+but I believe the numbers in general were acceptable. 
+
+Access to inspect the images that were missclassified during training and evaluation would have been very usefull for evalauting precision
+and recall.  
 
 <img src="TensorBoardFigures/totalLoss.jpg" width="250"/> <img src="TensorBoardFigures/learning rate.jpg" width="250"/>
 <img src="TensorBoardFigures/class_local_loss.jpg" width="500">
@@ -98,4 +126,8 @@ image next to its augmented image to visualize the effect that is made on the im
 
 ### Improve the reference
 
-How I run it to improve performace
+I would have liked to run the experiement with the following modifications:
+
+1) Large number of bacth size and total number of steps
+2) Different optimizing algorithm such as adams
+3) Differen machine learning rate annealing techniuq
