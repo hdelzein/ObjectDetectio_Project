@@ -13,8 +13,7 @@ Explain the project
 
 ### Data Analysis
 
-![Link To All Analysed Images!](https://github.com/hdelzein/ObjectDetection_Project/tree/master/DataImages/one_one.png "image Title")
-
+<img src="DataImages/one_one.png" width="1000">
 
 ### Cross Validation
 
