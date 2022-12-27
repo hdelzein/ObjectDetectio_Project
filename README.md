@@ -40,9 +40,9 @@ Explain the project
 <img src="TensorBoardFigures/detectPrecisionOne.jpg" width="500">
 <img src="TensorBoardFigures/detectPrecisionTwo.jpg" width="500">
 <img src="TensorBoardFigures/detectPrecisionThree.jpg" width="500">
-<img src="TensorBoardFigures/RecallOne.jpg" width="500">
-<img src="TensorBoardFigures/RecallTwo.jpg" width="500">
-<img src="TensorBoardFigures/RecallThree.jpg" width="500">
+<img src="TensorBoardFigures/recallOne.jpg" width="500">
+<img src="TensorBoardFigures/recallTwo.jpg" width="500">
+<img src="TensorBoardFigures/recallThree.jpg" width="500">
 
 
 ### Improve the reference
