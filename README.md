@@ -31,9 +31,12 @@ Explain the project
 
 ## Training
 
-### Reference Experiment
+### Training Experiment
 
-How I trained it
+<img src="TensorBoardFigures/class_local_loss.jpg" width="500" title = "Classification and Localzation Loss">
+<img src="TensorBoardFigures/norm_reg_loss.jpg" width="500" title = "Normalization and Regularization Loss">
+<img src="TensorBoardFigures/totalLoss.jpg" width="250" title = "Total Loss"> <img src="TensorBoardFigures/learning rate.jpg" width="250" title = "Total Loss">
+
 
 ### Improve the reference
 
