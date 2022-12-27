@@ -13,8 +13,8 @@ Explain the project
 
 ### Data Analysis
 
-<img src="DataImages/one_one.png" width="1000", height = "500">
-<img src="DataImages/two_one.png" width="1000", height = "500">
+<img src="DataImages/one_one.png" width="1000">
+<img src="DataImages/two_one.png" width="1000">
 
 ### Cross Validation
 
