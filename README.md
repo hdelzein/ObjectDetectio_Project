@@ -10,13 +10,13 @@ For this project, we will be using data from the [Waymo Open dataset](https://wa
 which is the ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz. We shall use Tensor flow object detetction API to custimize
 the training of the model. The Tensor Object Detection API relies on a config file to custimize the model training.
 
-## project Setup
+## Project Setup
 
 For this project I used the Udacity Desktop ennviroment fot training and evaluation. The structure of 
-the data is as follow:
+the data on Udacity Desktop enviroment is as follow:
 
-### Data Structure 
-The structure of the data used for training, validation and testing is organized as follow:
+### Data Structure
+The ia structure of the data used for training, validation and testing is organized as follow on the Udacity Desktop enviroment:
 ```
 /home/workspace/data/waymo
     - training_and_validation - contains 97 files to train and validate your models
@@ -26,7 +26,7 @@ The structure of the data used for training, validation and testing is organized
 ```
 ### Experiments Folder
 
-This is the default experiments folder structure provided by Udacity:
+This is the default experiments folder structure provided by Udacity on the Desktop enviroment:
 ```
 experiments/
     - pretrained_model/
@@ -37,6 +37,9 @@ experiments/
     - label_map.pbtxt
     ...
 ```
+
+### New Folder on the GitHub Enviroment
+
 I created a Final_Config_File folder in GitHub that include the final version of the pipeline_new.config
 file that I used to train and evaluate the final model.
 
@@ -65,8 +68,8 @@ I used the Exploratory Data Analysis.ipynb to plot ten random figures with cars 
 pedesrians bounding boxes in green and cyclists bounding boxes in yellow. The cars were the most extremly 
 frequent objects followed by pedestrians. Cyclists were very rare. As the images below shows that the data 
 included images with different brightness, and intensity levels. Also the plots included images of objects 
-at different, depth, scale, and with occulsions. More data analysis of the frequency of objects and there 
-distribution over the image dataset could have been very usefull and interesting if time on the GPU permitted.
+at different, depth, scale, and with occulsions. More data analysis of the frequency of objects and their 
+distributions over the image dataset could have been very usefull and interesting if time on the GPU permitted.
 
 
 <img src="DataImages/one_one.png" width="1000">
@@ -102,7 +105,7 @@ are tested toward the end. Hence it is better to consider the smooth total loss 
 For the total loss below, the training loss was equal to 0.6407 while the evaluation loss was equal to 0.877. I run this 
 experiment multiple times and I realized that even when the training can vary from one run to the next and it can overfit or not
 ovberfit, the evaluation loss value varied between 0.8 to 0.9. Also since the visalization of the evaluation is a dot versus a
-curve it was hard to examine how evaluationloss is trending.
+curve it was hard to examine how evaluation loss is trending.
 
 As far as the as the classification loss, the training and evaluation losses were low and close to each other. On the other hand 
 localiztion training and evaluation losses were close to each others but they were very slightly higher than the classification 
@@ -139,8 +142,8 @@ and recall.
 I would have liked to run the experiement with the following modifications:
 
 1) Large number of bacth size and total number of steps
-2) Different optimizing algorithm such as adams
-3) Differen machine learning rate annealing techniuq
+2) Different optimizing algorithm such as Adams
+3) Differen machine learning rate annealing techniques
 
 
 ## Video Animation
