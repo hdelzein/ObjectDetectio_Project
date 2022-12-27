@@ -94,15 +94,15 @@ image next to its augmented image to visualize the effect that is made on the im
 
 ### Training Experiment
 
-The training was executed on a batch size of two for total number of steps of 2500. As a result we can see that the losses is 
-not varying smoothly from one period to the other because of the small batch size. That is because that one of the small batch 
-size might generates a low loss but suddenly the performance worsen on the next batch size. Hence at the end of the total steps,
-the total loss can be either high or low based on the randomness of which batch of images are tested toward the end. Hence it is 
-better to consider the smooth total loss versus the value of the loss at the last step. For the total loss below, the training 
-loss was equal to 0.6407 while the evaluation loss was equal to 0.877. I run this experiment multiple times and I realized that 
-even when the training can vary from one run to the next and it can overfit or not ovberfit, the evaluation loss value varied 
-between 0.8 to 0.9. Also since the visalization of the evaluation is a dot versus a curve it was hard to examine how evaluation
-loss is trending.
+The training was executed on a batch size of 2 for total number of steps of 2500 with a low learning rate of 0.0006. As a 
+result we can see that the losses is not varying smoothly from one period to the other because of the small batch size. That is 
+because that one of the small batch size might generates a low loss but suddenly the performance worsen on the next batch size. 
+Hence at the end of the total steps, the total loss can be either high or low based on the randomness of which batch of images 
+are tested toward the end. Hence it is better to consider the smooth total loss versus the value of the loss at the last step. 
+For the total loss below, the training loss was equal to 0.6407 while the evaluation loss was equal to 0.877. I run this 
+experiment multiple times and I realized that even when the training can vary from one run to the next and it can overfit or not
+ovberfit, the evaluation loss value varied between 0.8 to 0.9. Also since the visalization of the evaluation is a dot versus a
+curve it was hard to examine how evaluationloss is trending.
 
 As far as the as the classification loss, the training and evaluation losses were low and close to each other. On the other hand 
 localiztion training and evaluation losses were close to each others but they were very slightly higher than the classification 
@@ -141,3 +141,15 @@ I would have liked to run the experiement with the following modifications:
 1) Large number of bacth size and total number of steps
 2) Different optimizing algorithm such as adams
 3) Differen machine learning rate annealing techniuq
+
+
+## Video Animation
+
+A video inference was generated at the end of this project and a file named animation.gif was geneated successful that showed
+good performance. The fils is saved in the following directory:
+
+```
+
+ObjectDetection_Project/animation.gif
+
+```
