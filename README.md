@@ -46,6 +46,16 @@ Final_Config_File/
 
 ```
 
+I created three directories that hold the Data Analysis Images, Data Augmentation Images and the Tensorboards Images.
+
+```
+DataImages/
+augImages/
+TensorBoardFigures/
+
+```
+
+
 
 ## Data Set
 
