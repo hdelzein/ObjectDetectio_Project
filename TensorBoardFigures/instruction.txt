@@ -1,0 +1,40 @@
+cd /home/workspace/experiments/pretrained_model/
+
+wget http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz
+
+tar -xvzf ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz
+
+rm -rf ssd_resnet50_v1_fpn_640x640_coco17_tpu-8.tar.gz
+
+
+cd /home/workspace/
+python edit_config.py --train_dir /home/workspace/data/train/ --eval_dir /home/workspace/data/val/ --batch_size 2 --checkpoint /home/workspace/experiments/pretrained_model/ssd_resnet50_v1_fpn_640x640_coco17_tpu-8/checkpoint/ckpt-0 --label_map /home/workspace/experiments/label_map.pbtxt
+
+
+Train
+
+python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config
+
+python -m tensorboard.main --logdir experiments/reference/ 
+
+evaluate 
+
+python experiments/model_main_tf2.py --model_dir=experiments/reference/ --pipeline_config_path=experiments/reference/pipeline_new.config --checkpoint_dir=experiments/reference/
+
+
+
+Animation:
+
+python experiments/exporter_main_v2.py --input_type image_tensor --pipeline_config_path experiments/reference/pipeline_new.config --trained_checkpoint_dir experiments/reference/ --output_directory experiments/reference/exported/
+
+python inference_video.py --labelmap_path label_map.pbtxt --model_path experiments/reference/exported/saved_model --tf_record_path data/test/segment-12200383401366682847_2552_140_2572_140_with_camera_labels.tfrecord --config_path experiments/reference/pipeline_new.config --output_path animation.gif
+
+
+
+cd /home/workspace
+
+du -h --max-depth={as much as you want}
+
+df -h
+
+---reload_interval
